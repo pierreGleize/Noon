@@ -24,6 +24,7 @@ gsap.fromTo(
   },
   {
     scale: 1,
+
     opacity: 1,
     duration: 1,
     stagger: 0.1,
@@ -95,15 +96,16 @@ document.querySelectorAll(".btn").forEach((slide) => {
   });
 });
 
-// EFFET DE LUMIERE SUR section intelligence
+// EFFET DE LUMIERE SUR section 1
 
-document.querySelectorAll(".intelligence-lumiere").forEach((image) => {
+const planete = document.querySelector(".image");
+if (planete) {
   const highlight = document.createElement("div");
   highlight.classList.add("highlight-image");
-  image.parentElement.appendChild(highlight);
+  planete.parentElement.appendChild(highlight);
 
-  image.addEventListener("mousemove", (e) => {
-    const rect = image.getBoundingClientRect();
+  planete.addEventListener("mousemove", (e) => {
+    const rect = planete.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     highlight.style.transform = `translate(${
@@ -112,31 +114,13 @@ document.querySelectorAll(".intelligence-lumiere").forEach((image) => {
     highlight.style.display = "block";
   });
 
-  image.addEventListener("mouseleave", () => {
+  planete.addEventListener("mouseleave", () => {
     highlight.style.display = "none";
   });
-});
+}
 
 // EFFET DE LUMIERE SUR SECTION INTELLIGENCE
 
-// const image = document.querySelector(".intelligence");
-// const highlight = document.createElement("div");
-// highlight.classList.add("intelligence-section-lumiere");
-// image.parentElement.appendChild(highlight);
-
-// image.addEventListener("mousemove", (e) => {
-//   const rect = image.getBoundingClientRect();
-//   const x = e.clientX - rect.left;
-//   const y = e.clientY - rect.top;
-//   highlight.style.transform = `translate(${x - highlight.offsetWidth / 2}px, ${
-//     y - highlight.offsetHeight / 2
-//   }px)`;
-//   highlight.style.display = "block";
-// });
-
-// image.addEventListener("mouseleave", () => {
-//   highlight.style.display = "none";
-// });
 document.querySelectorAll(".intelligence").forEach((image) => {
   const highlight = document.createElement("div");
   highlight.classList.add("intelligence-section-lumiere");
@@ -199,7 +183,7 @@ if (image2) {
     highlight.style.display = "none";
   });
 }
-
+// Faire Tourner Les Images
 const imageElement = document.querySelector(".image");
 const imageMenu = document.querySelector(".image-menu");
 const imageLink = document.querySelector(".image-link");
@@ -239,23 +223,6 @@ liElements.forEach((li) => {
   });
 });
 
-// FAIRE ECLAIRE LES CARRES AU SURVOL => REMPLACER PAR ANIMATION
-
-// const carreContenair = document.querySelector(".carré-contenair");
-// const carre = document.querySelectorAll(".carré");
-
-// carreContenair.addEventListener("mouseover", () => {
-//   carre.forEach((carre) => {
-//     carre.classList.add("carré-contenair-hover");
-//   });
-// });
-
-// carreContenair.addEventListener("mouseleave", () => {
-//   carre.forEach((carre) => {
-//     carre.classList.remove("carré-contenair-hover");
-//   });
-// });
-
 // SCALE LI LEARN MAIN GAUCHE
 
 const liLearnMainGauche = document.querySelectorAll(".learn-main-gauche-ul li");
@@ -273,16 +240,16 @@ liLearnMainGauche.forEach((li) => {
 
 // SCALE ET TRANSLATE ELEMENT AI GAUCHE
 
-const aicontenairGauche = document.querySelector(".ai-gauche-bg");
+const aiContenairGauche = document.querySelector(".ai-gauche-bg");
 
-aicontenairGauche.addEventListener("mouseover", () => {
+aiContenairGauche.addEventListener("mouseover", () => {
   const aiElements = document.querySelectorAll(".ai-gauche-element");
   aiElements.forEach((elements) => {
     elements.classList.add("ai-gauche-element-hover");
   });
 });
 
-aicontenairGauche.addEventListener("mouseleave", () => {
+aiContenairGauche.addEventListener("mouseleave", () => {
   const aiElements = document.querySelectorAll(".ai-gauche-element");
   aiElements.forEach((elements) => {
     elements.classList.remove("ai-gauche-element-hover");

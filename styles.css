@@ -271,7 +271,6 @@ h1 {
     justify-content: center;
     align-items: center;
     width:100%;
-    /* padding:0 10em; */
     margin: 9em 0;
 }
 .image{
@@ -285,10 +284,8 @@ h1 {
 
 
 .image-menu{
-    left:25%;
+    left:30%;
     top: 20%;
-    /* left:140px;
-    top: 90px; */
     position:absolute;
     width: 50px;
     padding: 10px;
@@ -308,8 +305,8 @@ h1 {
     padding: 10px;
     border-radius: 50%;
     border: 1px solid var(--troisieme-text-color);
-    right: 110px;
-    top: 130px;
+    right: 25%;
+    top: 25%;
     transition: transform 1s ease;
 }
 
@@ -323,8 +320,8 @@ h1 {
     padding: 10px;
     border-radius: 50%;
     border: 1px solid var(--troisieme-text-color);
-    right: 150px;
-    bottom: 120px;
+    right: 30%;
+    bottom: 25%;
     transition: transform 1s ease;
 }
 
@@ -339,8 +336,8 @@ h1 {
     padding: 10px;
     border-radius: 50%;
     border: 1px solid var(--troisieme-text-color);
-    left: 100px;
-    bottom: 150px;
+    left: 25%;
+    bottom: 30%;
     transition: transform 1s ease;
 }
 
@@ -435,6 +432,7 @@ width:100%;
 
 .welcome{
     text-align: center;
+       background: url('images/fond-étoilé.png');
 }
 
 
@@ -453,7 +451,7 @@ width:100%;
 
 
 
-.carré{
+.carre{
     border: 1px solid ;
     margin: 0; 
     padding: 0; 
@@ -466,7 +464,7 @@ width:100%;
     100% {border-color: #2F0D0A; }
 }
 
-.carré-englobe{
+.carre-englobe{
     background: linear-gradient(180deg, rgba(0,0,0,1) 8%, rgba(0,0,0,0.8016456582633054) 33%, rgba(0,0,0,0) 58%);
     z-index: 1;
      display: flex;
@@ -477,7 +475,7 @@ width:100%;
 
 }
 
-.carré-contenair{
+.carre-contenair{
     display: grid;
     grid-template-columns: repeat(8, 100px);
     grid-template-rows: repeat(3, 100px);
@@ -497,6 +495,7 @@ width:100%;
     align-items: center;
     width: 100%;
     margin-bottom: 7em;
+    /* position: relative; */
 }
 .image-intelligence{
     border: 1px solid var(--boder-color);
@@ -545,9 +544,9 @@ width:100%;
     pointer-events: none;
     transition: transform 0.1s linear;
     display: none;
-    box-shadow:  -600px -300px 87px 75px white;
+    /* box-shadow:  0px 0px 87px 75px white; */
+    box-shadow:  -600px -330px 87px 75px white;
     opacity: 0.1;
-
 }
 
 /* HUMAN */
@@ -1259,6 +1258,14 @@ width:100%;
     box-shadow:  0px 0px 80px 60px white;
     opacity: 0.1;
 }
+.highlight1 {
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.1s linear;
+    display: none;
+    box-shadow:  0px 0px 80px 60px white;
+    opacity: 1;
+}
 
 /* DERNIERE SECTION CARRE */
 
@@ -1271,8 +1278,10 @@ width:100%;
     border-radius: 20px;
     overflow: hidden;
     margin: 5em 4em 9em 4em;
+    background: url('images/fond-étoilé.png');
+    /* height: 50vh; */
 }
-.carré-englobe2{
+.carre-englobe2{
     background: linear-gradient(180deg, rgba(0,0,0,1) 8%, rgba(0,0,0,0.8016456582633054) 33%, rgba(0,0,0,0) 58%);
     z-index: 1;
     display: flex;
@@ -1280,25 +1289,28 @@ width:100%;
     align-items: center;
     rotate: 180deg;
 }
-.carré-englobe3{
+.carre-englobe3{
     background: linear-gradient(180deg, rgba(0,0,0,1) 8%, rgba(0,0,0,0.8016456582633054) 33%, rgba(0,0,0,0) 58%);
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center; 
 }
-.carré-contenair2{
+.carre-contenair2{
     display: grid;
     grid-template-columns: repeat(8, 120px);
-    grid-template-rows: repeat(3, 80px);
+    grid-template-rows: repeat(3, 50px);
+    /* grid-template-columns: repeat(8, 120px);
+    grid-template-rows: repeat(3, 80px); */
     row-gap: 0; 
     column-gap: 0;
-    transform: perspective(30px) rotateX(10deg);
+    transform: perspective(20px) rotateX(15deg);
+    /* transform: perspective(30px) rotateX(10deg); */
     background: linear-gradient(0deg, rgba(125,77,40,1) 0%, rgba(0,0,0,1) 50%);
     z-index: -1;
 }
 
-.carré2{
+.carre2{
     border: 1px solid ;
     margin: 0; 
     padding: 0; 
@@ -1416,33 +1428,21 @@ width:100%;
     }
     .presentation-image{
         justify-content: flex-end;
+
  
     }
     .presentation-liste{
         justify-content: flex-start;
     }
-}
-@media screen and (min-width: 1800px){
-    .image-menu{
-        left:200px;
-        top: 90px;
-    }
-    
-    
-    .image-link{
-        right: 180px;
-        top: 130px;
+    .intelligence-section-lumiere{
+        visibility: hidden;
 
     }
-       
-    .image-oeil{
-        right: 220px;
-        bottom: 120px;
-    }    
-    
-    .image-infiny{
-        left: 180px;
-        bottom: 150px;
+}
+@media screen and (min-width: 1800px){
+    .intelligence-section-lumiere{
+        box-shadow:  -700px -400px 87px 75px white;
+
     }
 }
 
@@ -1451,6 +1451,14 @@ width:100%;
         bottom: 5%;
         left: 17%;
     }
+}
+
+@media screen and (max-width: 1300px) {
+    .intelligence-section-lumiere{
+        box-shadow:  -481px -300px 87px 75px white;
+
+    }
+    
 }
 @media screen and (max-width: 1208px){
      .learns-contenair{
@@ -1487,6 +1495,7 @@ width:100%;
         padding-top: 5px;
         padding-left: 0px;
     } 
+   
 
 }
 @media screen and (max-width: 1170px){
@@ -1552,7 +1561,7 @@ width:100%;
         width: 700px;
         margin: 1em;
     }
-    .carré-contenair2{
+    .carre-contenair2{
         grid-template-columns: repeat(8, 80px);
         grid-template-rows: repeat(3, 50px);
         transform: perspective(20px) rotateX(20deg);
@@ -1595,6 +1604,10 @@ width:100%;
     .footer-contenair p{
         width: 100%;
         text-align: center;
+    }
+    .intelligence-section-lumiere{
+        box-shadow:  -420px -500px 87px 75px white;
+
     }
 
 }
@@ -1658,6 +1671,10 @@ width:100%;
     }
     .learns-contenair{
         padding: 5px;
+    }
+    .intelligence-section-lumiere{
+        box-shadow:  -350px -420px 87px 75px white;
+
     }
     
 }
@@ -1770,7 +1787,7 @@ width:100%;
         .ai-gauche-element4 p{
             margin-left: 15px;
         }
-        .carré-contenair2{
+        .carre-contenair2{
             grid-template-columns: repeat(8, 50px);
             grid-template-rows: repeat(3, 30px);
             transform: perspective(20px) rotateX(20deg);
@@ -1897,6 +1914,12 @@ width:100%;
      .footer-contenair p{
         font-size: 12px;
      }
+     .intelligence-section-lumiere{
+        box-shadow:  -290px -400px 87px 75px white;
+    }
+    .highlight-image {
+        box-shadow:  -250px 0px 80px 75px white;
+    }
 }
 
 @media screen and (max-width: 538px) {
@@ -2079,6 +2102,13 @@ width:100%;
         padding: 3px;
         font-size: 8px;
     }
+    .intelligence-section-lumiere{
+        box-shadow:  -220px -300px 87px 75px white;
+
+    }
+    .highlight-image {
+        box-shadow:  -200px 0px 80px 75px white;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -2119,5 +2149,9 @@ width:100%;
         justify-content: center;
 
      }
+     .intelligence-section-lumiere{
+        visibility: hidden;
+
+    }
     
 }
